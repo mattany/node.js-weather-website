@@ -71,11 +71,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-    // res.send({
-    //     location: 'London',
-    //     forecast: 'Cold',
-    //     address: req.query.address
-    // })
 })
 
 
