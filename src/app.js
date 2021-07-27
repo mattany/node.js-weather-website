@@ -3,6 +3,10 @@ const express = require('express')
 const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
+const app = express()
+const port = process.env.PORT || 3000
+
+
 
 console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
@@ -97,8 +101,8 @@ app.get('*', (req,res) => {
     res.render('404',{title: '404', name:"Mattan", error: "Page not found"})
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port + ".")
 })
 
 // nodemon --watch web-server -e js,hbs,json,css web-server\src\app.js
