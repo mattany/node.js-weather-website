@@ -11,7 +11,6 @@ const port = process.env.PORT || 3000
 console.log(__dirname)
 console.log(path.join(__dirname, '../public'))
 
-const app = express()
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
